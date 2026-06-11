@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.taskly.frontend.controller.LoginController"
+            stylesheets="/css/design-system.css" 
+            style="-fx-min-width: 1024; -fx-min-height: 600;">
+
+    <center>
+        <HBox spacing="0" style="-fx-background-color: -color-bg-primary;">
+            
+            <!-- LEFT PANEL (40%) - Welcome Section -->
+            <VBox spacing="32" alignment="TOP_CENTER" style="-fx-padding: 64px 48px; -fx-background-color: -color-bg-secondary; -fx-border-color: -color-border; -fx-border-width: 0 1 0 0;" HBox.hgrow="ALWAYS">
+                
+                <!-- Logo & Brand -->
+                <VBox spacing="12" alignment="CENTER">
+                    <Label text="Taskly" styleClass="typography-h1" style="-fx-text-fill: -color-accent-primary;"/>
+                    <Label text="Smart Academic Assistant" styleClass="typography-caption"/>
+                </VBox>
+                
+                <!-- Motivational Content -->
+                <VBox spacing="16" alignment="TOP_CENTER" style="-fx-padding: 32px 0;">
+                    <Label text="Focus Smarter, Not Harder" styleClass="typography-h2" style="-fx-text-alignment: center; -fx-wrap-text: true;"/>
+                    <Label text="Organize tasks automatically. Stay on top of deadlines. Achieve academic excellence with intelligent prioritization." 
+                           styleClass="typography-body" 
+                           style="-fx-text-alignment: center; -fx-wrap-text: true; -fx-text-fill: -color-text-secondary; -fx-max-width: 300;"/>
+                </VBox>
+                
+                <!-- Inspiration Quote -->
+                <VBox spacing="8" alignment="CENTER" style="-fx-padding: 24px; -fx-background-color: -color-bg-primary; -fx-border-radius: 16px;">
+                    <Label text="Every task completed is a step closer to your goals" 
+                           styleClass="typography-body" 
+                           style="-fx-text-alignment: center; -fx-wrap-text: true; -fx-font-style: italic;"/>
+                    <Label text="— Taskly Philosophy" styleClass="typography-caption" style="-fx-text-fill: -color-text-secondary;"/>
+                </VBox>
+                
+                <Region VBox.vgrow="ALWAYS"/>
+            </VBox>
+            
+            <!-- RIGHT PANEL (60%) - Login Form -->
+            <VBox spacing="0" alignment="CENTER" HBox.hgrow="ALWAYS" style="-fx-background-color: -color-bg-primary;">
+                <StackPane style="-fx-alignment: center; -fx-padding: 48px;">
+                    
+                    <VBox spacing="24" style="-fx-max-width: 420;">
+                        
+                        <!-- Welcome Header -->
+                        <VBox spacing="8">
+                            <Label text="Welcome Back" styleClass="typography-h2"/>
+                            <Label text="Sign in to your account to continue" styleClass="typography-caption"/>
+                        </VBox>
+                        
+                        <!-- Email Field -->
+                        <VBox spacing="8">
+                            <Label text="Email Address" styleClass="form-label"/>
+                            <TextField fx:id="emailField" promptText="your.email@university.edu" styleClass="text-field" style="-fx-font-size: 14px;"/>
+                        </VBox>
+                        
+                        <!-- Password Field -->
+                        <VBox spacing="8">
+                            <Label text="Password" styleClass="form-label"/>
+                            <PasswordField fx:id="passwordField" promptText="Enter your password" styleClass="text-field" style="-fx-font-size: 14px;"/>
+                        </VBox>
+                        
+                        <!-- Remember Me & Forgot Password -->
+                        <HBox spacing="0" alignment="CENTER_LEFT">
+                            <CheckBox text="Remember me" style="-fx-text-fill: -color-text-secondary; -fx-font-size: 13px;"/>
+                            <Region HBox.hgrow="ALWAYS"/>
+                            <Hyperlink text="Forgot password?" style="-fx-text-fill: -color-accent-primary; -fx-font-size: 13px; -fx-padding: 0; -fx-focus-color: transparent;"/>
+                        </HBox>
+                        
+                        <!-- Error/Status Message -->
+                        <Label fx:id="messageLabel" text="" styleClass="typography-small" style="-fx-text-fill: -color-danger; -fx-wrap-text: true; -fx-padding: 8px 0 0 0;"/>
+                        
+                        <!-- Login Button -->
+                        <Button text="Sign In" onAction="#handleLogin" styleClass="button-primary" style="-fx-padding: 14px 32px; -fx-font-size: 15px;"/>
+                        
+                        <!-- Divider -->
+                        <HBox spacing="12" alignment="CENTER" style="-fx-padding: 16px 0;">
+                            <Separator HBox.hgrow="ALWAYS" style="-fx-border-width: 1; -fx-border-color: -color-border;"/>
+                            <Label text="Don't have an account?" styleClass="typography-caption"/>
+                            <Separator HBox.hgrow="ALWAYS" style="-fx-border-width: 1; -fx-border-color: -color-border;"/>
+                        </HBox>
+                        
+                        <!-- Register Button -->
+                        <Button text="Create New Account" onAction="#goToRegister" styleClass="button-secondary" style="-fx-padding: 12px 24px; -fx-font-size: 14px;"/>
+                        
+                    </VBox>
+                </StackPane>
+            </VBox>
+            
+        </HBox>
+    </center>
+
+</BorderPane>
+
+

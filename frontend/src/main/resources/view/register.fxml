@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.taskly.frontend.controller.RegisterController"
+            stylesheets="/css/design-system.css" style="-fx-min-width: 1024; -fx-min-height: 600;">
+    
+    <center>
+        <HBox spacing="0" style="-fx-background-color: -color-bg-primary;">
+            
+            <!-- LEFT PANEL (40%) - Welcome Section -->
+            <VBox spacing="24" alignment="TOP_CENTER" style="-fx-padding: 64px 48px; -fx-background-color: -color-bg-secondary; -fx-border-color: -color-border; -fx-border-width: 0 1 0 0;">
+                <VBox alignment="TOP_CENTER">
+                    <Region VBox.vgrow="ALWAYS"/>
+                </VBox>
+                
+                <!-- Logo & Brand -->
+                <VBox spacing="12" alignment="CENTER">
+                    <Label text="Taskly" styleClass="typography-h1" style="-fx-text-fill: -color-accent-primary;"/>
+                    <Label text="Academic Excellence Starts Here" styleClass="typography-caption"/>
+                </VBox>
+                
+                <!-- Benefits Highlights -->
+                <VBox spacing="12" alignment="TOP_CENTER" style="-fx-padding: 32px 0;">
+                    <VBox spacing="8">
+                        <Label text="✨ Smart Task Prioritization" styleClass="typography-body" style="-fx-font-weight: 600;"/>
+                        <Label text="Automatically organize tasks by urgency and importance" styleClass="typography-body" style="-fx-text-fill: -color-text-secondary; -fx-wrap-text: true;"/>
+                    </VBox>
+                    <VBox spacing="8">
+                        <Label text="📊 Real-time Analytics" styleClass="typography-body" style="-fx-font-weight: 600;"/>
+                        <Label text="Track your progress and study patterns" styleClass="typography-body" style="-fx-text-fill: -color-text-secondary; -fx-wrap-text: true;"/>
+                    </VBox>
+                    <VBox spacing="8">
+                        <Label text="🎯 Deadline Tracking" styleClass="typography-body" style="-fx-font-weight: 600;"/>
+                        <Label text="Never miss a deadline with smart reminders" styleClass="typography-body" style="-fx-text-fill: -color-text-secondary; -fx-wrap-text: true;"/>
+                    </VBox>
+                </VBox>
+                
+                <Region VBox.vgrow="ALWAYS"/>
+            </VBox>
+            
+            <!-- RIGHT PANEL (60%) - Registration Form -->
+            <VBox spacing="0" alignment="CENTER" HBox.hgrow="ALWAYS" style="-fx-background-color: -color-bg-primary;">
+                <StackPane style="-fx-alignment: top_center; -fx-padding: 48px 32px;">
+                    
+                    <VBox spacing="24" style="-fx-max-width: 420;">
+                        
+                        <!-- Progress Indicator -->
+                        <VBox spacing="8">
+                            <Label text="Create Your Account" styleClass="typography-h3"/>
+                        </VBox>
+                        
+                        <!-- Full Form: Personal Info + Credentials (Combined) -->
+                        <VBox spacing="16" fx:id="formContainer" style="-fx-visibility: visible; -fx-managed: true;">
+                            <!-- Full Name -->
+                            <VBox spacing="8">
+                                <Label text="Full Name" styleClass="form-label"/>
+                                <TextField fx:id="fullNameField" promptText="e.g., John Doe" styleClass="text-field" style="-fx-font-size: 14px; -fx-padding: 12px 16px;"/>
+                            </VBox>
+                            
+                            <!-- Email -->
+                            <VBox spacing="8">
+                                <Label text="Email Address" styleClass="form-label"/>
+                                <TextField fx:id="emailField" promptText="your.email@university.edu" styleClass="text-field" style="-fx-font-size: 14px; -fx-padding: 12px 16px;"/>
+                                <Label text="Use your university email for better integration" styleClass="typography-caption" style="-fx-text-fill: -color-text-secondary;"/>
+                            </VBox>
+                            
+                            <!-- Password -->
+                            <VBox spacing="8">
+                                <Label text="Password" styleClass="form-label"/>
+                                <PasswordField fx:id="passwordField" promptText="At least 8 characters" styleClass="text-field" style="-fx-font-size: 14px; -fx-padding: 12px 16px;"/>
+                            </VBox>
+                            
+                            <!-- Confirm Password -->
+                            <VBox spacing="8">
+                                <Label text="Confirm Password" styleClass="form-label"/>
+                                <PasswordField fx:id="confirmPasswordField" promptText="Re-enter your password" styleClass="text-field" style="-fx-font-size: 14px; -fx-padding: 12px 16px;"/>
+                            </VBox>
+                        </VBox>
+                        
+                        <!-- Error/Status Message -->
+                        <Label fx:id="messageLabel" text="" styleClass="typography-small" style="-fx-text-fill: -color-danger; -fx-wrap-text: true; -fx-padding: 8px 0;"/>
+                        
+                        <!-- Submit Button -->
+                        <Button text="Create Account" onAction="#handleRegister" styleClass="button-primary" style="-fx-padding: 14px 32px; -fx-font-size: 15px;"/>
+                        
+                        <!-- Terms & Conditions -->
+                        <VBox spacing="8" alignment="TOP_CENTER" style="-fx-padding: 16px 0;">
+                            <Label text="By creating an account, you agree to our Terms of Service" styleClass="typography-caption" style="-fx-text-alignment: center; -fx-wrap-text: true;"/>
+                            <HBox spacing="4" alignment="CENTER" style="-fx-padding: 0;">
+                                <Hyperlink text="Terms" style="-fx-text-fill: -color-accent-primary; -fx-padding: 0; -fx-font-size: 12px;"/>
+                                <Label text="•" styleClass="typography-caption"/>
+                                <Hyperlink text="Privacy" style="-fx-text-fill: -color-accent-primary; -fx-padding: 0; -fx-font-size: 12px;"/>
+                            </HBox>
+                        </VBox>
+                        
+                        <!-- Login Link -->
+                        <HBox spacing="4" alignment="CENTER" style="-fx-padding: 8px;">
+                            <Label text="Already have an account?" styleClass="typography-caption"/>
+                            <Hyperlink text="Sign in" onAction="#goToLogin" style="-fx-text-fill: -color-accent-primary; -fx-padding: 0; -fx-font-weight: 600;"/>
+                        </HBox>
+                        
+                    </VBox>
+                </StackPane>
+            </VBox>
+            
+        </HBox>
+    </center>
+
+</BorderPane>
+

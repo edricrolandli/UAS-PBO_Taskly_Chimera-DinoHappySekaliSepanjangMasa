@@ -1,0 +1,755 @@
+/* ========================================
+   Taskly - Soft Modern Design
+   Palet: Warm Cream, Soft Teal, Soft Pink
+   ======================================== */
+
+/* ROOT - Global Styling */
+.root {
+  -fx-font-family: "Inter", "Segoe UI", "Helvetica", sans-serif;
+  -fx-font-size: 12;
+  -fx-text-fill: #3c3c3c;
+  -fx-background-color: #f9f6f0;
+}
+
+/* NAVBAR - High legibility & contrast */
+.navbar {
+  -fx-background-color: #1c352d; /* Premium Deep Teal */
+  -fx-padding: 10 20;
+  -fx-alignment: center-left;
+  -fx-spacing: 15;
+}
+
+.navbar .label {
+  -fx-text-fill: #ffffff;
+}
+
+.navbar-brand {
+  -fx-font-size: 18;
+  -fx-font-weight: bold;
+  -fx-text-fill: #ffffff;
+}
+
+.navbar-user {
+  -fx-text-fill: #a3d4c4; /* Light teal accent */
+  -fx-font-size: 13;
+  -fx-font-weight: 500;
+}
+
+.navbar .separator {
+  -fx-background-color: #2e4d44;
+}
+
+.navbar .button-add {
+  -fx-background-color: #a3d4c4;
+  -fx-text-fill: #1c352d;
+  -fx-font-weight: bold;
+  -fx-background-radius: 6;
+  -fx-padding: 8 16;
+}
+
+.navbar .button-add:hover {
+  -fx-background-color: #bce4d8;
+}
+
+.navbar .button-logout {
+  -fx-background-color: #d4a9a9;
+  -fx-text-fill: #5a2c2c;
+  -fx-font-weight: bold;
+  -fx-background-radius: 6;
+  -fx-padding: 8 16;
+}
+
+.navbar .button-logout:hover {
+  -fx-background-color: #e5bebe;
+}
+
+/* ========================================
+   COLOR PALETTE - Soft & Warm
+   ======================================== */
+
+/* Primary Colors:
+   Background:    #F9F6F0 (Warm Cream)
+   Surface:       #FFFFFF (Pure White)
+   Primary:       #A3D4C4 (Soft Teal)
+   Secondary:     #F4D9D7 (Soft Pink)
+   Text Dark:     #3C3C3C (Charcoal Soft)
+   Text Light:    #8B7E74 (Warm Brown)
+   Border:        #E8E3DC (Light Taupe)
+   Success:       #B8D4B8 (Soft Green)
+   Warning:       #E8C5A0 (Soft Orange)
+   Error:         #D4A9A9 (Soft Red)
+*/
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+
+.label {
+  -fx-text-fill: #3c3c3c;
+  -fx-font-size: 12;
+}
+
+.title {
+  -fx-font-size: 24;
+  -fx-font-weight: bold;
+  -fx-text-fill: #3c3c3c;
+}
+
+.subtitle {
+  -fx-font-size: 14;
+  -fx-text-fill: #8b7e74;
+}
+
+/* ========================================
+   BUTTONS - Soft & Smooth
+   ======================================== */
+
+.button {
+  -fx-padding: 10 20;
+  -fx-font-size: 12;
+  -fx-font-weight: 600;
+  -fx-background-color: #a3d4c4;
+  -fx-text-fill: #1f3a33;
+
+  -fx-border-radius: 8;
+  -fx-background-radius: 8;
+  -fx-cursor: hand;
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.08), 4, 0, 0, 2);
+}
+
+.button:hover {
+  -fx-background-color: #92c9b9;
+  -fx-text-fill: #16322b;
+
+  -fx-effect: dropshadow(gaussian, rgba(163, 212, 196, 0.3), 6, 0, 0, 3);
+}
+
+.button:pressed {
+  -fx-background-color: #81bea9;
+  -fx-text-fill: #16322b;
+
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.06), 2, 0, 0, 1);
+}
+
+/* Button variant - Primary (Teal) */
+.button-primary {
+  -fx-background-color: #a3d4c4;
+}
+
+.button-primary:hover {
+  -fx-background-color: #92c9b9;
+}
+
+/* Button variant - Success (Soft Green) */
+.button-success {
+  -fx-background-color: #b8d4b8;
+}
+
+.button-success:hover {
+  -fx-background-color: #a8c9a8;
+}
+
+/* Button variant - Danger (Soft Red) */
+.button-danger {
+  -fx-background-color: #d4a9a9;
+}
+
+.button-danger:hover {
+  -fx-background-color: #c99999;
+}
+
+/* Button variant - Secondary (Warm Brown) */
+.button-secondary {
+  -fx-background-color: #8b7e74;
+}
+
+.button-secondary:hover {
+  -fx-background-color: #7a6d63;
+}
+
+/* ========================================
+   TEXT INPUTS - Clean & Soft
+   ======================================== */
+
+.text-field,
+.text-area,
+.combo-box,
+.spinner {
+  -fx-font-size: 12;
+  -fx-padding: 10;
+  -fx-border-color: #e8e3dc;
+  -fx-border-width: 1.5;
+  -fx-border-radius: 8;
+  -fx-background-color: #ffffff;
+  -fx-text-fill: #3c3c3c;
+}
+
+.text-field:focused,
+.text-area:focused,
+.combo-box:focused,
+.spinner:focused {
+  -fx-border-color: #a3d4c4;
+  -fx-border-width: 2;
+  -fx-background-color: #f9f6f0;
+}
+
+.text-field:disabled,
+.text-area:disabled,
+.combo-box:disabled,
+.spinner:disabled {
+  -fx-background-color: #f0ebe5;
+  -fx-text-fill: #bfbab4;
+  -fx-border-color: #e8e3dc;
+}
+
+.date-picker {
+  -fx-font-size: 12;
+  -fx-padding: 10;
+  -fx-border-color: #e8e3dc;
+  -fx-border-width: 1.5;
+  -fx-border-radius: 8;
+}
+
+/* ========================================
+   TABLE VIEW - Clean & Readable
+   ======================================== */
+
+.table-view {
+  -fx-background-color: #ffffff;
+  -fx-border-color: #e8e3dc;
+  -fx-border-width: 1;
+  -fx-border-radius: 8;
+  -fx-font-size: 12;
+}
+
+.table-view .column-header {
+  -fx-background-color: #f9f6f0;
+  -fx-border-color: #e8e3dc;
+  -fx-font-weight: 600;
+  -fx-text-fill: #3c3c3c;
+  -fx-padding: 12;
+}
+
+.table-view .column-header:hover {
+  -fx-background-color: #f0ebe5;
+}
+
+.table-view .table-cell {
+  -fx-padding: 8 10;
+  -fx-border-color: #f0f0ed;
+
+  -fx-border-width: 0 0 0.5 0;
+  -fx-text-fill: #3c3c3c;
+}
+
+.table-view .table-row-cell {
+  -fx-background-color: #ffffff;
+  -fx-text-fill: #3c3c3c;
+  -fx-padding: 0;
+  -fx-cell-size: 38;
+}
+
+
+.table-view .table-row-cell:odd {
+  -fx-background-color: #fdfbf8;
+}
+
+.table-view .table-row-cell:hover {
+  -fx-background-color: #f5f2ee;
+}
+
+.table-view .table-row-cell:selected {
+  -fx-background-color: #e8e3dc;
+  -fx-text-fill: #3c3c3c;
+}
+
+/* ========================================
+   LIST VIEW & COMBO BOX - Soft Style
+   ======================================== */
+
+.list-view {
+  -fx-background-color: #ffffff;
+  -fx-border-color: #e8e3dc;
+  -fx-border-width: 1;
+  -fx-border-radius: 8;
+}
+
+.list-cell {
+  -fx-padding: 10;
+  -fx-text-fill: #3c3c3c;
+  -fx-font-size: 12;
+}
+
+.list-cell:filled:hover {
+  -fx-background-color: #f5f2ee;
+}
+
+.list-cell:filled:selected {
+  -fx-background-color: #a3d4c4;
+  -fx-text-fill: #ffffff;
+  -fx-font-weight: 600;
+}
+
+.list-cell:filled:selected:focused {
+  -fx-background-color: #92c9b9;
+}
+
+/* ========================================
+   CUSTOM COMBOBOX & DATEPICKER STYLING
+   ======================================== */
+
+.combo-box,
+.date-picker {
+  -fx-background-color: #ffffff;
+  -fx-border-color: #e8e3dc;
+  -fx-border-width: 1.5;
+  -fx-border-radius: 8;
+  -fx-background-radius: 8;
+}
+
+.combo-box:hover,
+.date-picker:hover {
+  -fx-border-color: #d8cfc7;
+}
+
+.combo-box:focused,
+.date-picker:focused {
+  -fx-border-color: #a3d4c4;
+  -fx-background-color: #ffffff;
+}
+
+.combo-box > .arrow-button,
+.date-picker > .arrow-button {
+  -fx-background-color: transparent;
+  -fx-background-insets: 0;
+  -fx-background-radius: 0 8 8 0;
+  -fx-padding: 0 10;
+}
+
+.combo-box > .arrow-button > .arrow {
+  -fx-background-color: #1c352d;
+  -fx-shape: "M 0 0 L 4 4 L 8 0 Z";
+}
+
+.date-picker > .arrow-button > .arrow {
+  -fx-background-color: #1c352d;
+}
+
+/* ComboBox dropdown selections */
+.combo-box-popup .list-view {
+  -fx-border-color: #e8e3dc;
+  -fx-background-color: #ffffff;
+  -fx-border-radius: 8;
+  -fx-background-radius: 8;
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.08), 8, 0, 0, 3);
+}
+
+.combo-box-popup .list-view .list-cell {
+  -fx-padding: 8 12;
+  -fx-background-color: #ffffff;
+  -fx-text-fill: #3c3c3c;
+}
+
+.combo-box-popup .list-view .list-cell:filled:hover {
+  -fx-background-color: #f5f2ee;
+  -fx-text-fill: #3c3c3c;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected {
+  -fx-background-color: #1c352d;
+  -fx-text-fill: #ffffff;
+  -fx-font-weight: bold;
+}
+
+/* DatePicker calendar popup styles */
+.date-picker-popup {
+  -fx-background-color: #ffffff;
+  -fx-border-color: #e8e3dc;
+  -fx-border-width: 1.5;
+  -fx-border-radius: 12;
+  -fx-background-radius: 12;
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 4);
+  -fx-padding: 10;
+}
+
+.date-picker-popup > .month-year-pane {
+  -fx-background-color: #f9f6f0;
+  -fx-background-radius: 8 8 0 0;
+  -fx-padding: 8;
+}
+
+.date-picker-popup > .month-year-pane > .left-button,
+.date-picker-popup > .month-year-pane > .right-button {
+  -fx-background-color: transparent;
+  -fx-cursor: hand;
+}
+
+.date-picker-popup > .month-year-pane > .left-button:hover,
+.date-picker-popup > .month-year-pane > .right-button:hover {
+  -fx-background-color: #e8e3dc;
+  -fx-background-radius: 4;
+}
+
+.date-picker-popup > .month-year-pane > .left-button > .left-arrow {
+  -fx-background-color: #1c352d;
+}
+
+.date-picker-popup > .month-year-pane > .right-button > .right-arrow {
+  -fx-background-color: #1c352d;
+}
+
+.date-picker-popup > .calendar-grid {
+  -fx-background-color: #ffffff;
+  -fx-padding: 5;
+}
+
+.date-picker-popup .calendar-cell {
+  -fx-background-color: #ffffff;
+  -fx-text-fill: #3c3c3c;
+  -fx-font-size: 11;
+  -fx-alignment: center;
+  -fx-padding: 6;
+  -fx-background-radius: 4;
+}
+
+.date-picker-popup .calendar-cell:hover {
+  -fx-background-color: #f5f2ee;
+  -fx-cursor: hand;
+}
+
+.date-picker-popup .selected {
+  -fx-background-color: #a3d4c4;
+  -fx-text-fill: #1c352d;
+  -fx-font-weight: bold;
+}
+
+.date-picker-popup .today {
+  -fx-background-color: #f4d9d7;
+  -fx-text-fill: #5a2c2c;
+  -fx-font-weight: bold;
+}
+
+/* ========================================
+   CUSTOM ALERT DIALOG STYLING
+   ======================================== */
+
+.dialog-pane.custom-alert {
+  -fx-background-color: #ffffff;
+  -fx-border-color: #a3d4c4;
+  -fx-border-width: 2;
+  -fx-border-radius: 16;
+  -fx-background-radius: 16;
+  -fx-padding: 20;
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.15), 15, 0.3, 0, 4);
+}
+
+.dialog-pane.custom-alert > .header-panel {
+  -fx-background-color: transparent;
+  -fx-padding: 0;
+  -fx-border-width: 0;
+}
+
+.dialog-pane.custom-alert > .content {
+  -fx-padding: 10 0;
+  -fx-background-color: transparent;
+}
+
+.dialog-pane.custom-alert .button-bar {
+  -fx-padding: 15 0 0 0;
+}
+
+/* ========================================
+   SPLITPANE - Clean Divider
+   ======================================== */
+
+.split-pane {
+  -fx-background-color: #f9f6f0;
+}
+
+.split-pane:horizontal .split-pane-divider {
+  -fx-padding: 0 1;
+  -fx-background-color: #e8e3dc;
+}
+
+/* ========================================
+   CONTAINERS - Soft Backgrounds
+   ======================================== */
+
+.vbox,
+.hbox {
+  -fx-spacing: 12;
+}
+
+.border-pane {
+  -fx-background-color: #f9f6f0;
+}
+
+/* Header/Top sections */
+.header-section {
+  -fx-background-color: #ffffff;
+  -fx-border-color: #e8e3dc;
+  -fx-border-width: 0 0 1 0;
+  -fx-padding: 16;
+}
+
+/* Card style - Soft Shadow */
+.card {
+  -fx-background-color: #ffffff;
+  -fx-border-color: #e8e3dc;
+  -fx-border-width: 1;
+  -fx-border-radius: 8;
+  -fx-padding: 16;
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.06), 3, 0, 0, 1);
+}
+
+.card:hover {
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 2);
+}
+
+/* Stats boxes - Soft Colors */
+.stat-box {
+  -fx-background-color: #ffffff;
+  -fx-border-color: #e8e3dc;
+  -fx-border-width: 1;
+  -fx-border-radius: 8;
+  -fx-padding: 16;
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.06), 3, 0, 0, 1);
+}
+
+.stat-box-primary {
+  -fx-background-color: linear-gradient(to bottom, #f5eeeb, #ffffff);
+}
+
+.stat-box-success {
+  -fx-background-color: linear-gradient(to bottom, #ebf4eb, #ffffff);
+}
+
+.stat-box-warning {
+  -fx-background-color: linear-gradient(to bottom, #f9f0e6, #ffffff);
+}
+
+.stat-box-error {
+  -fx-background-color: linear-gradient(to bottom, #f5e6e6, #ffffff);
+}
+
+/* ========================================
+   ALERTS & MESSAGES - Soft Colors
+   ======================================== */
+
+.dialog-pane {
+  -fx-background-color: #ffffff;
+  -fx-border-color: #a3d4c4;
+  -fx-border-width: 1.5;
+  -fx-border-radius: 12;
+  -fx-background-radius: 12;
+  -fx-padding: 15;
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0, 0, 4);
+}
+
+.dialog-pane > .container {
+  -fx-background-color: transparent;
+}
+
+.dialog-pane .label {
+  -fx-text-fill: #3c3c3c;
+  -fx-font-family: "Inter", "Segoe UI", sans-serif;
+  -fx-font-size: 13;
+}
+
+.dialog-pane .header-panel {
+  -fx-background-color: #f9f6f0;
+  -fx-border-color: #e8e3dc;
+  -fx-border-width: 0 0 1 0;
+  -fx-padding: 10 15;
+}
+
+.dialog-pane .header-panel .label {
+  -fx-font-size: 15;
+  -fx-font-weight: bold;
+  -fx-text-fill: #1c352d;
+}
+
+.dialog-pane .content {
+  -fx-padding: 15 5 15 5;
+}
+
+.dialog-pane .content .label {
+  -fx-font-size: 13;
+  -fx-text-fill: #3c3c3c;
+}
+
+.dialog-pane .button-bar {
+  -fx-padding: 10 0 0 0;
+}
+
+.dialog-pane .button {
+  -fx-padding: 8 20;
+  -fx-font-size: 12;
+  -fx-font-weight: bold;
+  -fx-background-color: #a3d4c4;
+  -fx-text-fill: #1c352d;
+  -fx-background-radius: 6;
+  -fx-cursor: hand;
+  -fx-effect: none;
+}
+
+.dialog-pane .button:hover {
+  -fx-background-color: #92c9b9;
+  -fx-text-fill: #16322b;
+}
+
+/* Success message */
+.message-success {
+  -fx-text-fill: #b8d4b8;
+  -fx-font-weight: bold;
+}
+
+/* Error message */
+.message-error {
+  -fx-text-fill: #d4a9a9;
+  -fx-font-weight: bold;
+}
+
+/* Warning message */
+.message-warning {
+  -fx-text-fill: #e8c5a0;
+  -fx-font-weight: bold;
+}
+
+/* Info message */
+.message-info {
+  -fx-text-fill: #a3d4c4;
+  -fx-font-weight: bold;
+}
+
+/* ========================================
+   SCROLLBAR - Soft & Subtle
+   ======================================== */
+
+.scroll-bar {
+  -fx-font-size: 12;
+  -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+  -fx-background-color: #d8cfc7;
+  -fx-background-radius: 4;
+}
+
+.scroll-bar .thumb:hover {
+  -fx-background-color: #c9bdb3;
+}
+
+/* ========================================
+   TEXT & COLOR UTILITIES
+   ======================================== */
+
+.primary-text {
+  -fx-text-fill: #a3d4c4;
+  -fx-font-weight: 600;
+}
+
+.secondary-text {
+  -fx-text-fill: #8b7e74;
+}
+
+.success-text {
+  -fx-text-fill: #b8d4b8;
+  -fx-font-weight: 600;
+}
+
+.danger-text {
+  -fx-text-fill: #d4a9a9;
+  -fx-font-weight: 600;
+}
+
+.warning-text {
+  -fx-text-fill: #e8c5a0;
+  -fx-font-weight: 600;
+}
+
+/* ========================================
+   AUTH PAGES - Modern Gradient
+   ======================================== */
+
+.auth-container {
+  -fx-background-color: linear-gradient(135deg, #a3d4c4 0%, #f4d9d7 100%);
+}
+
+.auth-form {
+  -fx-background-color: #ffffff;
+  -fx-border-radius: 12;
+  -fx-padding: 32;
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.12), 8, 0, 0, 3);
+}
+
+.auth-title {
+  -fx-font-size: 28;
+  -fx-font-weight: bold;
+  -fx-text-fill: #3c3c3c;
+  -fx-padding: 0 0 20 0;
+}
+
+.auth-subtitle {
+  -fx-font-size: 13;
+  -fx-text-fill: #8b7e74;
+  -fx-padding: 0 0 24 0;
+}
+
+/* ========================================
+   BADGES & TAGS - Soft Style
+   ======================================== */
+
+.badge {
+  -fx-padding: 6 12;
+  -fx-background-color: #a3d4c4;
+  -fx-text-fill: #ffffff;
+  -fx-font-size: 11;
+  -fx-font-weight: 600;
+  -fx-border-radius: 12;
+  -fx-background-radius: 12;
+}
+
+.badge-success {
+  -fx-background-color: #b8d4b8;
+}
+
+.badge-danger {
+  -fx-background-color: #d4a9a9;
+}
+
+.badge-warning {
+  -fx-background-color: #e8c5a0;
+  -fx-text-fill: #3c3c3c;
+}
+
+.badge-secondary {
+  -fx-background-color: #d8cfc7;
+  -fx-text-fill: #3c3c3c;
+}
+
+/* ========================================
+   SPECIAL COMPONENTS
+   ======================================== */
+
+/* Separator - Soft divider */
+.separator {
+  -fx-background-color: #e8e3dc;
+}
+
+/* Checkbox & RadioButton */
+.check-box {
+  -fx-text-fill: #3c3c3c;
+}
+
+.check-box .box {
+  -fx-background-color: #ffffff;
+  -fx-border-color: #e8e3dc;
+  -fx-border-width: 1.5;
+  -fx-border-radius: 4;
+}
+
+.check-box:selected .box {
+  -fx-background-color: #a3d4c4;
+  -fx-border-color: #a3d4c4;
+}
