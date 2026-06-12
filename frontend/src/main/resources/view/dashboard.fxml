@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.taskly.frontend.controller.DashboardController"
+            stylesheets="/css/design-system.css">
+
+    <top>
+        <HBox spacing="16" alignment="CENTER_LEFT" styleClass="navbar">
+            <VBox spacing="2">
+                <Label text="Taskly" styleClass="sidebar-logo" style="-fx-font-size: 18px;"/>
+                <Label text="Dashboard" styleClass="typography-caption" style="-fx-text-fill: -color-text-secondary;"/>
+            </VBox>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="+ Tambah Tugas" onAction="#handleAddTask" styleClass="button-primary" style="-fx-padding: 10px 20px;"/>
+        </HBox>
+    </top>
+
+    <center>
+        <ScrollPane fx:id="mainScrollPane" fitToWidth="true"
+                    style="-fx-background-color: -color-bg-primary; -fx-padding: 0;">
+            <VBox spacing="28" styleClass="content-area">
+
+                <!-- GREETING -->
+                <VBox spacing="4">
+                    <Label fx:id="greetingLabel" text="Selamat datang! 👋" styleClass="typography-h2"/>
+                    <Label text="Kelola tugasmu dengan fokus dan capai tujuanmu hari ini." styleClass="typography-body"
+                           style="-fx-text-fill: -color-text-secondary;"/>
+                </VBox>
+
+                <!-- STATS CARDS -->
+                <HBox fx:id="statsSection" spacing="16" alignment="TOP_LEFT">
+                    <VBox spacing="8" styleClass="card-stats" HBox.hgrow="ALWAYS">
+                        <Label text="Total Tugas" styleClass="card-stats-label"/>
+                        <Label fx:id="totalTasksLabel" text="0" styleClass="card-stats-value"/>
+                    </VBox>
+                    <VBox spacing="8" styleClass="card-stats" HBox.hgrow="ALWAYS">
+                        <Label text="Selesai" styleClass="card-stats-label" style="-fx-text-fill: -color-success;"/>
+                        <Label fx:id="completedLabel" text="0" styleClass="card-stats-value" style="-fx-text-fill: -color-success;"/>
+                    </VBox>
+                    <VBox spacing="8" styleClass="card-stats" HBox.hgrow="ALWAYS">
+                        <Label text="Deadline Dekat" styleClass="card-stats-label" style="-fx-text-fill: -color-danger;"/>
+                        <Label fx:id="reminderCountLabel" text="0" styleClass="card-stats-value" style="-fx-text-fill: -color-danger;"/>
+                        <Label text="Perlu perhatian" styleClass="card-stats-insight"/>
+                    </VBox>
+                </HBox>
+
+                <!-- MAIN CONTENT SPLIT -->
+                <HBox spacing="24">
+
+                    <!-- LEFT: Task Cards -->
+                    <VBox spacing="20" HBox.hgrow="ALWAYS">
+
+                        <!-- Active Tasks -->
+                        <VBox fx:id="activeTaskSection" spacing="14" styleClass="card">
+                            <HBox spacing="10" alignment="CENTER_LEFT">
+                                <Label text="Tugas Aktif" styleClass="typography-h3"/>
+                                <Region HBox.hgrow="ALWAYS"/>
+                                <ComboBox fx:id="prioritySortCombo" promptText="Semua Prioritas" prefWidth="160"
+                                          style="-fx-background-color: white; -fx-border-color: -color-border; -fx-border-radius: 8; -fx-background-radius: 8;"/>
+                                <ComboBox fx:id="typeFilterCombo" promptText="Semua Tipe" prefWidth="135"
+                                          style="-fx-background-color: white; -fx-border-color: -color-border; -fx-border-radius: 8; -fx-background-radius: 8;"/>
+                            </HBox>
+                            <VBox fx:id="taskListBox" spacing="12"/>
+                        </VBox>
+
+                        <!-- Completed Tasks -->
+                        <VBox fx:id="completedSection" spacing="14" styleClass="card">
+                            <Label text="Tugas Selesai" styleClass="typography-h3"/>
+                            <VBox fx:id="completedListBox" spacing="8"/>
+                        </VBox>
+
+                    </VBox>
+
+                    <!-- RIGHT: Info Panel -->
+                    <VBox fx:id="reminderSection" spacing="16" style="-fx-min-width: 300; -fx-max-width: 320;">
+
+                        <!-- Upcoming Deadlines Card -->
+                        <VBox spacing="12" styleClass="card">
+                            <HBox alignment="CENTER_LEFT" spacing="6">
+                                <Label text="📅 Deadline Mendatang" styleClass="typography-h3"/>
+                                <Label text="(≤ 2 hari)" styleClass="typography-caption"
+                                       style="-fx-text-fill: -color-text-secondary;"/>
+                            </HBox>
+                            <VBox fx:id="reminderListBox" spacing="10"/>
+                        </VBox>
+
+                        <!-- Tips Card -->
+                        <VBox spacing="10" styleClass="card"
+                              style="-fx-background-color: rgba(59,141,137,0.05); -fx-border-color: -color-accent-secondary;">
+                            <Label text="💡 Tips Produktif" styleClass="typography-h3"
+                                   style="-fx-text-fill: -color-accent-primary;"/>
+                            <Label text="✓  Gunakan teknik Pomodoro untuk fokus lebih baik"
+                                   styleClass="typography-body" style="-fx-wrap-text: true; -fx-text-fill: -color-text-primary;"/>
+                            <Label text="✓  Buat daftar tugas di malam hari"
+                                   styleClass="typography-body" style="-fx-wrap-text: true; -fx-text-fill: -color-text-primary;"/>
+                            <Label text="✓  Prioritaskan tugas penting terlebih dahulu"
+                                   styleClass="typography-body" style="-fx-wrap-text: true; -fx-text-fill: -color-text-primary;"/>
+                            <Label text="✓  Istirahat cukup untuk hasil optimal"
+                                   styleClass="typography-body" style="-fx-wrap-text: true; -fx-text-fill: -color-text-primary;"/>
+                        </VBox>
+
+                    </VBox>
+                </HBox>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+
+</BorderPane>
