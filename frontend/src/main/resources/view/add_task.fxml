@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.taskly.frontend.controller.AddTaskController"
+            stylesheets="/css/design-system.css" style="-fx-min-width: 900; -fx-min-height: 700;">
+
+    <top>
+        <HBox spacing="16" alignment="CENTER_LEFT" styleClass="navbar">
+            <Label text="Tambah Tugas Baru" styleClass="navbar-title"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="messageLabel" styleClass="typography-small" style="-fx-text-fill: -color-danger; -fx-wrap-text: true;"/>
+        </HBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" style="-fx-background-color: -color-bg-primary; -fx-padding: 0;">
+            <HBox spacing="0" alignment="TOP_CENTER" style="-fx-padding: 40px 32px;">
+
+                <!-- Main Form Container -->
+                <VBox spacing="20" style="-fx-max-width: 680;">
+
+                    <!-- SECTION 1: TASK DETAILS -->
+                    <VBox spacing="16" styleClass="card">
+                        <Label text="Detail Tugas" styleClass="typography-h2"/>
+
+                        <!-- Task Title -->
+                        <VBox spacing="6">
+                            <Label text="Judul Tugas *" styleClass="form-label"/>
+                            <TextField fx:id="titleField" promptText="cth. Kerjakan Tugas Kalkulus" styleClass="text-field"/>
+                        </VBox>
+
+                        <!-- Notes/Description -->
+                        <VBox spacing="6">
+                            <Label text="Catatan / Deskripsi" styleClass="form-label"/>
+                            <TextArea fx:id="descArea" promptText="Tambahkan catatan, sub-tugas, atau detail penting..." wrapText="true"
+                                      styleClass="text-area" prefRowCount="4"/>
+                        </VBox>
+                    </VBox>
+
+                    <!-- SECTION 2: PLANNING -->
+                    <VBox spacing="16" styleClass="card">
+                        <Label text="Perencanaan" styleClass="typography-h2"/>
+
+                        <!-- Deadline -->
+                        <VBox spacing="6">
+                            <Label text="Deadline *" styleClass="form-label"/>
+                            <DatePicker fx:id="deadlinePicker" promptText="Pilih tanggal deadline" style="-fx-font-size: 14px;"/>
+                        </VBox>
+
+                        <!-- Difficulty & Estimated Hours -->
+                        <HBox spacing="16">
+                            <VBox spacing="6" HBox.hgrow="ALWAYS">
+                                <Label text="Tingkat Kesulitan" styleClass="form-label"/>
+                                <HBox spacing="8" alignment="CENTER_LEFT">
+                                    <Spinner fx:id="difficultySpinner" prefWidth="80" style="-fx-font-size: 14px;"/>
+                                    <Label text="(1 = Mudah, 5 = Sangat Sulit)" styleClass="typography-caption"/>
+                                </HBox>
+                            </VBox>
+
+                            <VBox spacing="6" HBox.hgrow="ALWAYS">
+                                <Label text="Estimasi Waktu (jam) *" styleClass="form-label"/>
+                                <TextField fx:id="hoursField" promptText="cth. 3.5" styleClass="text-field"/>
+                            </VBox>
+                        </HBox>
+
+                        <!-- Task Type -->
+                        <VBox spacing="6">
+                            <Label text="Tipe Tugas *" styleClass="form-label"/>
+                            <ComboBox fx:id="typeCombo" promptText="Pilih tipe tugas"
+                                      style="-fx-font-size: 14px; -fx-min-width: 200px;"/>
+                        </VBox>
+                    </VBox>
+
+                </VBox>
+
+            </HBox>
+        </ScrollPane>
+    </center>
+
+    <bottom>
+        <HBox spacing="12" alignment="CENTER_RIGHT"
+              style="-fx-padding: 16px 32px; -fx-background-color: -color-bg-secondary; -fx-border-color: -color-border; -fx-border-width: 1 0 0 0;">
+            <Button text="Batal" onAction="#handleCancel" styleClass="button-secondary" style="-fx-padding: 10px 20px;"/>
+            <Button text="Buat Tugas" onAction="#handleSave" styleClass="button-primary" style="-fx-padding: 12px 32px; -fx-font-weight: bold;"/>
+        </HBox>
+    </bottom>
+</BorderPane>
