@@ -39,44 +39,6 @@ Tidak perlu install Java atau Maven — semua sudah tersedia di dalam paket.
 
 ---
 
-### Menjalankan dari Source Code (Opsional)
-
-Untuk developer yang ingin menjalankan dari kode sumber:
-
-#### Prerequisites
-- Java 25+
-- Maven 3.9+
-
-**1. Clone repositori**
-```bash
-git clone https://github.com/edricrolandli/UAS-PBO_Taskly_Chimera-DinoHappySekaliSepanjangMasa.git
-cd UAS-PBO_Taskly_Chimera-DinoHappySekaliSepanjangMasa
-```
-
-**2. Jalankan Backend**
-```bash
-cd backend
-mvn spring-boot:run
-```
-Backend berjalan di `http://localhost:8080`
-
-**3. Jalankan Frontend** (terminal baru)
-```bash
-cd frontend
-mvn javafx:run
-```
-
-#### Konfigurasi Database
-Database H2 berjalan otomatis saat backend distart. H2 Console tersedia di:
-```
-http://localhost:8080/h2-console
-JDBC URL : jdbc:h2:file:./data/taskly
-Username : sa
-Password : (kosong)
-```
-
----
-
 ## Video Presentasi
 
 [![Video Presentasi](https://img.shields.io/badge/YouTube-Tonton%20Presentasi-red?logo=youtube)](https://youtu.be/KK2zdouqNBQ)
