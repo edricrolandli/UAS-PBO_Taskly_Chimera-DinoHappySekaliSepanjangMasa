@@ -35,7 +35,6 @@ Taskly adalah aplikasi manajemen tugas akademik berbasis desktop yang membantu m
 3. Extract zip ke folder mana saja
 4. Buka folder hasil extract, jalankan **Taskly.exe**
 
-Tidak perlu install Java atau Maven — semua sudah tersedia di dalam paket.
 
 ---
 
