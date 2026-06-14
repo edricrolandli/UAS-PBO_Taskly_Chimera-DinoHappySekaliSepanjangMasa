@@ -28,11 +28,24 @@ Taskly adalah aplikasi manajemen tugas akademik berbasis desktop yang membantu m
 
 ## Cara Menjalankan
 
-### Prerequisites
+### Download & Install (Direkomendasikan)
+
+1. Buka halaman [Releases](https://github.com/edricrolandli/UAS-PBO_Taskly_Chimera-DinoHappySekaliSepanjangMasa/releases/tag/v1.0.0)
+2. Download **Taskly.zip**
+3. Extract zip ke folder mana saja
+4. Buka folder hasil extract, jalankan **Taskly.exe**
+
+Tidak perlu install Java atau Maven — semua sudah tersedia di dalam paket.
+
+---
+
+### Menjalankan dari Source Code (Opsional)
+
+Untuk developer yang ingin menjalankan dari kode sumber:
+
+#### Prerequisites
 - Java 25+
 - Maven 3.9+
-
-### Langkah Instalasi
 
 **1. Clone repositori**
 ```bash
@@ -53,7 +66,7 @@ cd frontend
 mvn javafx:run
 ```
 
-### Konfigurasi Database
+#### Konfigurasi Database
 Database H2 berjalan otomatis saat backend distart. H2 Console tersedia di:
 ```
 http://localhost:8080/h2-console
@@ -66,7 +79,7 @@ Password : (kosong)
 
 ## Video Presentasi
 
-[Tambahkan link YouTube di sini]
+[![Video Presentasi](https://img.shields.io/badge/YouTube-Tonton%20Presentasi-red?logo=youtube)](https://youtu.be/KK2zdouqNBQ)
 
 ---
 
